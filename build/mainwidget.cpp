@@ -35,12 +35,28 @@ void mainWidget::Init()
     int desktop_width = QApplication::desktop()->width()/2;
     int desktop_high = QApplication::desktop()->height()/2;
     this->setFixedSize(desktop_width, desktop_high);
-    //connect(ui->pushButtonLognin,SIGNAL(clicked()),this,SLOT(LognIn()));
+    connect(ui->pushButtonLognin,SIGNAL(clicked()),this,SLOT(slotLognIn()));
 }
 
-void mainWidget::LognIn()
+void mainWidget::slotLognIn()
 {
-    //QString user = ui->lineEditUserName->text();
-    //QString passWord = ui->lineEditPassWord->text();
     m_cGetInfo->GetXmlInfo();
+    QString user = ui->lineEditUserName->text();
+    QString passWord = ui->lineEditPassWord->text();
+    if(m_cGetInfo->GetUser() == user && m_cGetInfo->GetPassWord() == passWord)
+    {
+        if(m_cGetInfo->GetIsFirstLogin())
+        {
+            ui->stackedWidgetLognin->setCurrentIndex(2);
+        }
+        else
+        {
+            ui->stackedWidgetLognin->setCurrentIndex(0);
+        }
+    }else
+    {
+        ui->lineEditUserName->clear();
+        ui->lineEditPassWord->clear();
+    }
+
 }

@@ -20,7 +20,7 @@ public:
     ~mainWidget();
     void Init();
 private slots:
-    void LognIn();
+    void slotLognIn();
 private:
     Ui::mainWidget *ui;
     CInterfaceControl* m_cInterfaceControl;

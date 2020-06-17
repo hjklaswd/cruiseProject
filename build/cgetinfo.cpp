@@ -7,14 +7,15 @@ CGetInfo::CGetInfo()
 
 void CGetInfo::GetXmlInfo()
 {
-    QString xmlPath = QDir::currentPath();
+    QString xmlPath = QDir::homePath();;
     QString xmlFileName = xmlPath + "/" + XMLFILENAME;
-    qDebug()<<xmlFileName << " &&&&&&&&&&&&&& ";
     QFileInfo xmlInfo(xmlFileName);
+    qDebug()<<xmlFileName<<"@@@@@@@@@@@";
     if(!xmlInfo.exists())
     {
-        qDebug()<<"no";
         CreateXml(xmlFileName);
+        m_strUser = "root";
+        m_strPassWord = "123456";
         m_bIsFirstLogin = true;
         return ;
     }else
@@ -28,10 +29,19 @@ bool CGetInfo::GetIsFirstLogin()
     return m_bIsFirstLogin;
 }
 
+QString CGetInfo::GetUser()
+{
+    return m_strUser;
+}
+
+QString CGetInfo::GetPassWord()
+{
+    return m_strPassWord;
+}
+
 void CGetInfo::CreateXml(QString fileName)
 {
     QFile xmlFile(fileName);
-    qDebug()<<fileName << " &&&&&&&&&&&&&& ";
     if(!xmlFile.open(QIODevice::WriteOnly | QIODevice::Text))
     {
         return;
@@ -88,7 +98,7 @@ void CGetInfo::ReadXml(QString fileName)
     QDomElement passWord = root.toElement();
     if(!passWord.isNull())
     {
-        m_strUser = passWord.text();
+        m_strPassWord = passWord.text();
     }
 }
 

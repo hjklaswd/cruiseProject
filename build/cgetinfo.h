@@ -15,6 +15,8 @@ public:
 
     void GetXmlInfo();
     bool GetIsFirstLogin();
+    QString GetUser();
+    QString GetPassWord();
 private:
     void CreateXml(QString fileName);
     void ReadXml(QString fileName);
