@@ -22,6 +22,7 @@ void getXmlInfo()
     {
         qDebug()<<"no";
         createXml(xmlFileName);
+        return ;
     }
 }
 int main(int argc, char *argv[])

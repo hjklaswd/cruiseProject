@@ -1,14 +1,14 @@
 #include "InterfaceControl.h"
 #include "ui_widget.h"
 
-InterfaceControl::InterfaceControl(QWidget *parent)
+CInterfaceControl::CInterfaceControl(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
 }
 
-InterfaceControl::~InterfaceControl()
+CInterfaceControl::~CInterfaceControl()
 {
     delete ui;
 }
