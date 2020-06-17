@@ -20,25 +20,25 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_InterfaceControl_t {
+struct qt_meta_stringdata_CInterfaceControl_t {
     QByteArrayData data[1];
-    char stringdata0[17];
+    char stringdata0[18];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_InterfaceControl_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_CInterfaceControl_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_InterfaceControl_t qt_meta_stringdata_InterfaceControl = {
+static const qt_meta_stringdata_CInterfaceControl_t qt_meta_stringdata_CInterfaceControl = {
     {
-QT_MOC_LITERAL(0, 0, 16) // "InterfaceControl"
+QT_MOC_LITERAL(0, 0, 17) // "CInterfaceControl"
 
     },
-    "InterfaceControl"
+    "CInterfaceControl"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_InterfaceControl[] = {
+static const uint qt_meta_data_CInterfaceControl[] = {
 
  // content:
        8,       // revision
@@ -54,7 +54,7 @@ static const uint qt_meta_data_InterfaceControl[] = {
        0        // eod
 };
 
-void InterfaceControl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void CInterfaceControl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
@@ -62,30 +62,30 @@ void InterfaceControl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject InterfaceControl::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject CInterfaceControl::staticMetaObject = { {
     &QWidget::staticMetaObject,
-    qt_meta_stringdata_InterfaceControl.data,
-    qt_meta_data_InterfaceControl,
+    qt_meta_stringdata_CInterfaceControl.data,
+    qt_meta_data_CInterfaceControl,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *InterfaceControl::metaObject() const
+const QMetaObject *CInterfaceControl::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *InterfaceControl::qt_metacast(const char *_clname)
+void *CInterfaceControl::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_InterfaceControl.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_CInterfaceControl.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int InterfaceControl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int CInterfaceControl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     return _id;

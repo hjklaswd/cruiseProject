@@ -4,12 +4,12 @@
 #include <QDebug>
 #include <QPluginLoader>
 
-class MySQLDB
+class CMySQLDB
 {
 public:
-    MySQLDB();
-    ~MySQLDB();
-    void loadMySqlDriver();
+    CMySQLDB();
+    ~CMySQLDB();
+    void LoadMySqlDriver();
 };
 
 #endif // MYSQLDB_H
