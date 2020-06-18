@@ -17,13 +17,15 @@ public:
     bool GetIsFirstLogin();
     QString GetUser();
     QString GetPassWord();
+    void WriteXml(QString passWord);
 private:
-    void CreateXml(QString fileName);
-    void ReadXml(QString fileName);
+    void CreateXml();
+    void ReadXml();
 private:
-    bool m_bIsFirstLogin;
-    QString m_strUser;
-    QString m_strPassWord;
+    bool m_bIsFirstLogin;                   //是否需要修改初始密码
+    QString m_strUser;                      //xml文件中的用户名
+    QString m_strPassWord;                  //xml文件中的密码
+    QString m_strXmlPath;                   //xml的路径
 };
 
 #endif // CGETINFO_H

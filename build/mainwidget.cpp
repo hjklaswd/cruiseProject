@@ -35,7 +35,11 @@ void mainWidget::Init()
     int desktop_width = QApplication::desktop()->width()/2;
     int desktop_high = QApplication::desktop()->height()/2;
     this->setFixedSize(desktop_width, desktop_high);
+    ui->lineEditPW->setEchoMode(QLineEdit::Password);
+    ui->lineEditPWAgain->setEchoMode(QLineEdit::Password);
+    ui->lineEditPassWord->setEchoMode(QLineEdit::Password);
     connect(ui->pushButtonLognin,SIGNAL(clicked()),this,SLOT(slotLognIn()));
+    connect(ui->pushButtonReset,SIGNAL(clicked()),this,SLOT(slotAgainPassWord()));
 }
 
 void mainWidget::slotLognIn()
@@ -59,4 +63,17 @@ void mainWidget::slotLognIn()
         ui->lineEditPassWord->clear();
     }
 
+}
+
+void mainWidget::slotAgainPassWord()
+{
+    if(ui->lineEditPW->text() == ui->lineEditPWAgain->text())
+    {
+        m_cGetInfo->WriteXml(ui->lineEditPW->text());
+    }
+    else
+    {
+        ui->lineEditPW->clear();
+        ui->lineEditPWAgain->clear();
+    }
 }

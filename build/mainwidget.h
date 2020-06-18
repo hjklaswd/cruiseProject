@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QApplication>
 #include <QDesktopWidget>
+#include <QMessageBox>
 #include "cgetinfo.h"
 #include "InterfaceControl.h"
 
@@ -21,6 +22,7 @@ public:
     void Init();
 private slots:
     void slotLognIn();
+    void slotAgainPassWord();
 private:
     Ui::mainWidget *ui;
     CInterfaceControl* m_cInterfaceControl;
