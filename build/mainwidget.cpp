@@ -40,6 +40,7 @@ void mainWidget::Init()
     ui->lineEditPassWord->setEchoMode(QLineEdit::Password);
     connect(ui->pushButtonLognin,SIGNAL(clicked()),this,SLOT(slotLognIn()));
     connect(ui->pushButtonReset,SIGNAL(clicked()),this,SLOT(slotAgainPassWord()));
+	//sdf;dfjkasdjkf
 }
 
 void mainWidget::slotLognIn()
